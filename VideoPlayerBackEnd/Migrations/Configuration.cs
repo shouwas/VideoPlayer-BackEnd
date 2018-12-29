@@ -4,6 +4,7 @@ namespace VideoPlayerBackEnd.Migrations
     using System.Data.Entity;
     using System.Data.Entity.Migrations;
     using System.Linq;
+    using VideoPlayerBackEnd.Models;
 
     internal sealed class Configuration : DbMigrationsConfiguration<VideoPlayerBackEnd.Data.AppDbContext>
     {
@@ -18,6 +19,7 @@ namespace VideoPlayerBackEnd.Migrations
 
             //  You can use the DbSet<T>.AddOrUpdate() helper extension method 
             //  to avoid creating duplicate seed data.
+            context.Videos.Add(new Video() { Title = "Angular", Url= "Link", Descreption= "Blabla"});
         }
     }
 }
